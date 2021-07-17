@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>em-zhang:SpotifyStats</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href="//getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet">
+    <link href="../static/css/signup.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h3 class="text-muted">em-zhang</h3>
+        </div>
+        <div class="jumbotron">
+            <h1>SpotifyStats 🎵</h1>
+            <h3>featuring your recent top 50 tracks</h3>
+        </div>
+        
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Artist</th>
+              <th>Song</th>
+              <th>Album</th>
+              <th>Popularity</th>
+            </tr>
+            {% for row in x %}
+              <h3>
+                <tbody>
+                  <tr>
+                    <td>{{row[0]}}</td>
+                    <td>{{row[1]}}</td>
+                    <td>{{row[2]}}</td>
+                    <td>{{row[3]}}</td>
+                </tr>
+                </tbody>
+              </h3>
+            {% endfor %}
+          </thead>
+        </table>
+        <footer class="footer">
+            <p>&copy; Emily Zhang 2021</p>
+        </footer>
+    </div>
+</body>
+</html>
