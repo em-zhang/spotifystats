@@ -7,7 +7,6 @@ from spotipy.oauth2 import SpotifyClientCredentials
 import spotipy.util as util
 
 from flask import Flask, request, redirect, g, render_template
-import requests
 from urllib.parse import quote
 
 app = Flask(__name__)

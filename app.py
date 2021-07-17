@@ -20,12 +20,9 @@ SPOTIFY_API_URL = "{}/{}".format(SPOTIFY_API_BASE_URL, API_VERSION)
 
 # Server-side Parameters
 CLIENT_SIDE_URL = "http://127.0.0.1"
-PORT = 8080
+PORT = 5000
 REDIRECT_URI = "{}:{}/callback/q".format(CLIENT_SIDE_URL, PORT)
 SCOPE = "playlist-modify-public playlist-modify-private"
-STATE = ""
-SHOW_DIALOG_bool = True
-SHOW_DIALOG_str = str(SHOW_DIALOG_bool).lower()
 
 auth_query_parameters = {
     "response_type": "code",
@@ -43,7 +40,11 @@ def index():
 
 @app.route("/callback/q")
 def callback():
-    # Auth Step 4: Requests refresh and access tokens    
+    spotify = spotifystats.SpotifyStats()
+    config = spotify.config()
+    tracks = spotify.get_tracks(config, "medium_term")
+    all_songs = spotify.list_all_songs()
+
     x = 0
     top_albums = all_songs["album"]
     top_songs = all_songs["song"]
