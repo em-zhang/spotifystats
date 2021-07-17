@@ -1,6 +1,0 @@
-Flask
-pandas
-spotify
-spotipy
-urllib3
-requests
