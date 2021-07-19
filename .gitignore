@@ -1,4 +1,6 @@
 .cache
+__pycache__
+.spotify_caches
+.flask_session
 package.json
 package-lock.json
-config.json
