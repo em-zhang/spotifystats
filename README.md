@@ -33,6 +33,3 @@ Navigate to http://127.0.0.1:5000/ to view your top songs and artists.
 - React
 - Bootstrap
 - HTML/CSS
-
-### Example response for user data
-<img width="300" alt="Screen Shot 2021-07-29 at 7 16 55 PM" src="https://user-images.githubusercontent.com/78116228/127589962-b963cc65-87ce-49d2-8677-9cbe75fc7e12.png">
